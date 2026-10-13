@@ -79,7 +79,7 @@ jobs:
           uv run --locked xenia live render --state runs/state.json --runs runs --output site --manifest-root runs --experiment-id EXP-030
 
       - name: Upload reproducible run and rendered page
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: exp-002-${{ steps.grid.outputs.mode }}-${{ github.run_id }}
           if-no-files-found: error

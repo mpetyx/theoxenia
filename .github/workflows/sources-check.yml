@@ -32,7 +32,7 @@ jobs:
         run: uv run --locked xenia sources check --config configs/sources.yaml --out runs/sources-check/sources_check.json
 
       - name: Upload the check
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: sources-check
           path: |
