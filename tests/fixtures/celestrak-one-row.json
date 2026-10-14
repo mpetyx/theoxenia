@@ -1,0 +1,21 @@
+{
+  "id": "celestrak",
+  "name": "Celestrak",
+  "endpoint": "https://celestrak.org",
+  "probe_url": "https://celestrak.org/NORAD/elements/gp.php?CATNR=25544&FORMAT=json",
+  "method": "GET",
+  "http_status": 200,
+  "bytes_read": 424,
+  "content_length": 424,
+  "content_type": "application/json; charset=UTF-8",
+  "content_range": null,
+  "date_header": "Mon, 12 Oct 2026 22:10:08 GMT",
+  "sha256_of_bytes_read": "2bb02951aaa8339fbc106412edbbd64eaac976f1d60b81178c2cabc5742d6175",
+  "truncated": false,
+  "elapsed_s": 0.852056,
+  "error": null,
+  "synthetic": false,
+  "numbers_from": "live",
+  "verdict": "verified",
+  "note": "Live GET 200, bytes_read=424, truncated=false."
+}
