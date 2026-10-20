@@ -47,7 +47,7 @@ jobs:
           uv run --locked mkdocs build --strict --site-dir "$RUNNER_TEMP/observatory-docs"
       - name: Preserve compact evidence if publication fails
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: observatory-evidence-${{ github.run_id }}
           path: runs/
