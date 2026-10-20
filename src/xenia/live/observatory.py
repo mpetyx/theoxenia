@@ -6,7 +6,6 @@ or a fresh machine does not rescan completed windows. No branch is created.
 
 from __future__ import annotations
 
-import fcntl
 import subprocess
 from collections.abc import Callable
 from datetime import UTC, datetime
@@ -111,6 +110,9 @@ def run_cycle(
     runner: Callable[[QueuePair], PairOutcome] | None = None,
 ) -> ObservatoryStatus:
     """Process at most max_pairs real windows, retaining failures for bounded retries."""
+    # fcntl is POSIX only. Importing it here keeps the rest of the CLI usable on Windows.
+    import fcntl
+
     if not 1 <= max_pairs <= 8:
         raise ValueError("max_pairs must be between 1 and 8")
     root = root.resolve()
