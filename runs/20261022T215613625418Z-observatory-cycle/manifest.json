@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1",
+  "run_id": "20261022T215613625418Z-observatory-cycle",
+  "pillar": "live",
+  "command": "python scripts/observatory.py --max-pairs 1",
+  "parameters": {
+    "mode": "scheduled",
+    "attempted": 0,
+    "new_runs": []
+  },
+  "inputs": [
+    {
+      "uri": "configs/queue.jsonl",
+      "sha256": "53af23be0342ee2c9112d6a3acee27dbb197a53cfac12b5668f8c3763a742bcc",
+      "size_bytes": 12377
+    },
+    {
+      "uri": "configs/live.yaml",
+      "sha256": "d4828f6a556b8526dada878946fc2226663ab3514111793ea40ad93b28064138",
+      "size_bytes": 1012
+    }
+  ],
+  "outputs": [
+    {
+      "path": "runs/20261022T215613625418Z-observatory-cycle/cycle.json",
+      "sha256": "505794fd7555576dfad57e34fc654588361c406d360bd80a8780abbac6639617",
+      "size_bytes": 454,
+      "media_type": null
+    },
+    {
+      "path": "runs/20261022T215613625418Z-observatory-cycle/manifest.json",
+      "sha256": null,
+      "size_bytes": null,
+      "media_type": null
+    }
+  ],
+  "git_sha": "d9374d6",
+  "package_version": "0.1.0",
+  "started_at": "2026-10-22T21:56:13.625418Z",
+  "finished_at": "2026-10-22T21:56:13.927586Z",
+  "outcome": "queue_complete",
+  "notes": [
+    "Scheduled archive processing; no new telescope observations or 24-hour acceptance."
+  ],
+  "experiment_id": "OBS-001",
+  "demo": false,
+  "mission_control": null
+}
