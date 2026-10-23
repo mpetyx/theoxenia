@@ -313,7 +313,9 @@ def run_voyager(
                     f"expected {SOURCE_SIZE_BYTES}, observed {transfer_metrics.source_size_bytes}"
                 )
 
-            with tempfile.TemporaryDirectory(prefix="xenia-exp001-") as temporary_directory:
+            with tempfile.TemporaryDirectory(
+                prefix="xenia-exp001-", ignore_cleanup_errors=True
+            ) as temporary_directory:
                 temporary_root = Path(temporary_directory)
                 slice_path = temporary_root / "voyager-window.h5"
                 slice_info = slice_hdf5_filterbank(

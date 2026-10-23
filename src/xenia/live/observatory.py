@@ -6,7 +6,6 @@ or a fresh machine does not rescan completed windows. No branch is created.
 
 from __future__ import annotations
 
-import fcntl
 import subprocess
 from collections.abc import Callable
 from datetime import UTC, datetime
@@ -117,7 +116,12 @@ def run_cycle(
     lock_path = root / ".preview" / "observatory.lock"
     lock_path.parent.mkdir(parents=True, exist_ok=True)
     with lock_path.open("a") as lock:
-        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        try:
+            import fcntl
+
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except ModuleNotFoundError:
+            pass
         return _cycle(root, max_pairs=max_pairs, mode=mode, runner=runner)
 
 
