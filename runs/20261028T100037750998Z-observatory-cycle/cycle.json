@@ -1,0 +1,17 @@
+{
+  "mode": "scheduled",
+  "state": "queue_complete",
+  "checked_at": "2026-10-28T10:00:38.156399Z",
+  "cycle_id": "20261028T100037750998Z-observatory-cycle",
+  "queue_sha256": "53af23be0342ee2c9112d6a3acee27dbb197a53cfac12b5668f8c3763a742bcc",
+  "queued_windows": 8,
+  "completed_windows": 8,
+  "pending_windows": 0,
+  "blocked_windows": 0,
+  "new_runs": [],
+  "failures": {},
+  "cadence_ids": [
+    "bl-opendata-63460"
+  ],
+  "interval_minutes": 180
+}
