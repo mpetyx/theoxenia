@@ -226,11 +226,11 @@ def run_turboseti(
         raise RuntimeError("turbo-seti and blimpy package metadata must be installed") from exc
 
     finder = finder_class(
-        str(filterbank_path),
+        filterbank_path.resolve().as_posix(),
         max_drift=max_drift_hz_s,
         min_drift=1e-5,
         snr=minimum_snr,
-        out_dir=str(output_directory),
+        out_dir=output_directory.resolve().as_posix(),
         n_coarse_chan=n_coarse_channels,
         blank_dc=True,
         precision=1,

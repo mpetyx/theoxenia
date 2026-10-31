@@ -738,11 +738,11 @@ def _attr_float(attrs: object, name: str) -> float | None:
         if name not in attrs:  # type: ignore[operator]
             return None
         raw = attrs[name]  # type: ignore[index]
-    except KeyError, TypeError:
+    except (KeyError, TypeError):
         return None
     try:
         return float(raw)
-    except TypeError, ValueError:
+    except (TypeError, ValueError):
         return None
 
 

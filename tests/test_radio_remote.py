@@ -41,7 +41,7 @@ class _RangeHandler(BaseHTTPRequestHandler):
             start_text, end_text = interval.split("-", maxsplit=1)
             start = int(start_text)
             end = int(end_text)
-        except ValueError, TypeError:
+        except (ValueError, TypeError):
             self.send_error(400, "invalid range")
             return
         if unit != "bytes" or start < 0 or end < start or end >= len(self.server.payload):

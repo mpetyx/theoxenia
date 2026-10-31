@@ -83,7 +83,7 @@ def read_git_sha(root: Path | None = None) -> str:
             text=True,
             timeout=5,
         )
-    except OSError, subprocess.SubprocessError:
+    except (OSError, subprocess.SubprocessError):
         return "unknown"
     return result.stdout.strip() or "unknown"
 
