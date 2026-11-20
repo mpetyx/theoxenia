@@ -1,8 +1,8 @@
 {
   "mode": "scheduled",
   "state": "queue_complete",
-  "checked_at": "2026-11-19T20:58:41.342817Z",
-  "cycle_id": "20261119T205841011411Z-observatory-cycle",
+  "checked_at": "2026-11-20T02:36:36.349900Z",
+  "cycle_id": "20261120T023635988788Z-observatory-cycle",
   "queue_sha256": "53af23be0342ee2c9112d6a3acee27dbb197a53cfac12b5668f8c3763a742bcc",
   "queued_windows": 8,
   "completed_windows": 8,
